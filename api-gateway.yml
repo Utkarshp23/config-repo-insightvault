@@ -15,7 +15,11 @@ spring:
             locator:
               enabled: true
             lower-case-service-id: true
-
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8081/.well-known/jwks.json
 ##Disable case              
 
 management:
