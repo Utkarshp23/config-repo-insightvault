@@ -25,4 +25,11 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"  
+        include: "*" 
+
+logging:
+  level:
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.security.web: DEBUG
+    org.springframework.security: DEBUG
+    com.nimbusds.jose: DEBUG        
