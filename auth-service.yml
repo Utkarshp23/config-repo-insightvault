@@ -20,6 +20,11 @@ spring:
 jwt:
   secret: 3e1649e7937351b012e5f0199c1cda4e817a55400f8c03b7491c24c32d6a0352
   expiration-seconds: 15
+  keystore:
+    path: U:\Microservices\securityCerts\jwt.p12  
+    store-password: me@#23
+    key-alias: jwt
+    key-password: me@#23
 
 management:
   endpoints:
