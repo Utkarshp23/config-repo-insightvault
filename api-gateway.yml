@@ -30,7 +30,23 @@ management:
 
 logging:
   level:
-    org.springframework.security.oauth2: DEBUG
-    org.springframework.security.web: DEBUG
+    # Spring Security resource-server internals
+    org.springframework.security.oauth2.server.resource: DEBUG
+    org.springframework.security.oauth2.server.resource.authentication: DEBUG
+    org.springframework.security.oauth2.server.resource.web: DEBUG
+
+    # General Spring Security
     org.springframework.security: DEBUG
-    com.nimbusds.jose: DEBUG        
+    org.springframework.security.web: DEBUG
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.security.oauth2.jwt: DEBUG
+
+    # Nimbus internals involved in JWK retrieval/selection/verification
+    com.nimbusds.jose: DEBUG
+    com.nimbusds.jose.jwk: DEBUG
+    com.nimbusds.jose.jwk.source: DEBUG
+    com.nimbusds.jose.proc: DEBUG
+
+    # Reactive HTTP client used to fetch JWKS
+    reactor.netty.http.client: DEBUG
+    org.springframework.web.reactive.function.client.ExchangeFunctions: DEBUG   
