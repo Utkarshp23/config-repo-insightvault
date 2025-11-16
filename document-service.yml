@@ -1,0 +1,45 @@
+server:
+  port: 8082
+
+# Enable mock security for local testing
+security:
+  mock:
+    enabled: true
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/insight_doc_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+storage:
+  bucket: documents-bucket
+  endpoint: http://localhost:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+
+logging:
+  level:
+    org.springframework.security.oauth2: DEBUG
+    org.springframework.security.web: DEBUG
+    org.springframework.security: DEBUG
+    com.nimbusds.jose: DEBUG      
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" 
