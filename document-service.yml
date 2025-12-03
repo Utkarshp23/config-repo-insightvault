@@ -2,9 +2,9 @@ server:
   port: 8082
 
 # Enable mock security for local testing
-#security:
-  #mock:
-    #enabled: true
+# security:
+#   mock:
+#     enabled: true
 
 spring:
   datasource:
@@ -24,6 +24,21 @@ spring:
       resourceserver:
         jwt:
           jwk-set-uri: http://localhost:8081/.well-known/jwks.json
+
+  # --- RabbitMQ & Cloud Stream Config ---
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        # Logic Name: documentUploaded-out-0
+        # This matches the string used in streamBridge.send(...)
+        documentUploaded-out-0:
+          destination: document-exchange  # The actual Exchange name in RabbitMQ
+          content-type: application/json
 
 eureka:
   client:
@@ -48,5 +63,3 @@ management:
     web:
       exposure:
         include: "*" 
-
-
