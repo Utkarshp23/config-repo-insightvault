@@ -11,6 +11,10 @@ spring:
           destination: document-exchange
           group: ai-processor-group
           content-type: application/json
+        processDocument-out-0:
+          destination: search-exchange
+          content-type: application/json
+          
   rabbitmq:
     host: localhost
     port: 5672
@@ -41,4 +45,11 @@ logging:
     org.springframework.cloud.stream: DEBUG
 
 document-service:
-  url: http://localhost:8081/api/documents
+  url: http://localhost:8082
+
+auth-service:
+  url: http://localhost:8081
+
+ai:
+  client-id: ai-processor-service
+  client-secret: ai-secret-123
