@@ -49,4 +49,4 @@ logging:
 
     # Reactive HTTP client used to fetch JWKS
     reactor.netty.http.client: DEBUG
-    org.springframework.web.reactive.function.client.ExchangeFunctions: DEBUG   
+    org.springframework.web.reactive.function.client.ExchangeFunctions: DEBUG 
