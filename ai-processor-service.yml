@@ -24,10 +24,10 @@ spring:
   ai:
     google:
       genai:
-        api-key: 
+        api-key: AIzaSyAA2v_itszPiNeWb4p4gCARos4XoAysThU
       chat:
           options:
-            model: gemini-1.5-flash
+            model: gemini-2.5-flash
 
 eureka:
   client:
