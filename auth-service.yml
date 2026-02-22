@@ -10,7 +10,6 @@ spring:
     url: jdbc:mysql://localhost:3306/insight_auth_db
     username: root
     password: root
-
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -19,9 +18,9 @@ spring:
 
 jwt:
   secret: 3e1649e7937351b012e5f0199c1cda4e817a55400f8c03b7491c24c32d6a0352
-  expiration-seconds: 15
+  expiration-seconds: 295200 
   keystore:
-    path: D:\Utkarsh\Microservices\SecurityCert\jwt.p12   # path to your p12
+    path: U:\Microservices\securityCert\jwt.p12 
     store-password: ${JWT_KEYSTORE_PASSWORD:me@#23}
     key-alias: jwt
     key-password: ${JWT_KEY_PASSWORD:me@#23}
