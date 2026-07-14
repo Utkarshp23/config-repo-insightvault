@@ -21,13 +21,8 @@ spring:
     username: guest
     password: guest
 
-  ai:
-    google:
-      genai:
-        api-key: 
-      chat:
-          options:
-            model: gemini-2.5-flash
+anthropic:
+  model: claude-haiku-4-5
 
 eureka:
   client:
